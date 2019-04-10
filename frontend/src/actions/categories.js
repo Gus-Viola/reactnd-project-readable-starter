@@ -1,10 +1,10 @@
-import { getCategories } from '../utils/ReadableAPI';
+import { getCategories } as api from '../utils/ReadableAPI';
 
 export const GET_CATEGORIES = 'GET_CATEGORIES';
 
 export function getCategories() {
   return dispatch => {
-    getCategories().then((data) => {
+    api.getCategories().then((data) => {
       return dispatch({
         type: GET_CATEGORIES,
         data,
