@@ -63,7 +63,7 @@ export const upvotePost = (postid, content) =>
 export const getCommentsByPost = (postid) =>
   fetch(`${api}/posts/${postid}/comments`, {
     headers })
-      .then(res => res.json();
+      .then(res => res.json());
 
 export const getComment = (commentid) =>
   fetch(`${api}/comments/${commentid}`, {

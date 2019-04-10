@@ -1,4 +1,4 @@
-import { getTotalPosts, getPostsByCategory, getPost, addPost, editPost, deletePost, upvotePost } as api from '../utils/ReadableAPI';
+import * as api from '../utils/ReadableAPI';
 
 export const GET_TOTAL_POSTS = 'GET_TOTAL_POSTS';
 
@@ -61,7 +61,7 @@ export function editPost(postid, content) {
         type: EDIT_POST,
         data,
       });
-    }).then(() => {dispatch(getPost(postId))});
+    }).then(() => {dispatch(getPost(postid))});
   };
 };
 
@@ -87,6 +87,6 @@ export function upvotePost(postid, content) {
         type: UPVOTE_POST,
         data,
       });
-    }).then(() => {dispatch(getPost(postId))});
+    }).then(() => {dispatch(getPost(postid))});
   };
 };

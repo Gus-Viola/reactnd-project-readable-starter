@@ -6,8 +6,8 @@ export default function posts(state = {}, action) {
 
   switch (action.type) {
     case GET_TOTAL_POSTS:
-      return _.mapKeys(data, 'id'); //is this right?
-      // return { ...state, [data.id]: data };
+      //return _.mapKeys(data, 'id'); //is this right?
+      return { ...state, [data.id]: data };
 
     case GET_POSTS_BY_CATEGORY:
       return { ...state, [data.id]: data };

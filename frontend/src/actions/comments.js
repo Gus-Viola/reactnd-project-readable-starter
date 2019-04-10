@@ -1,4 +1,4 @@
-import { getCommentsByPost, getComment, addComment, editComment, deleteComment, upvoteComment } as api from '../utils/ReadableAPI';
+import * as api from '../utils/ReadableAPI';
 
 export const GET_COMMENTS_BY_POST = 'GET_COMMENTS_BY_POST';
 //is this function right?

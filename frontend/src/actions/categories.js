@@ -1,4 +1,4 @@
-import { getCategories } as api from '../utils/ReadableAPI';
+import * as api from '../utils/ReadableAPI';
 
 export const GET_CATEGORIES = 'GET_CATEGORIES';
 
