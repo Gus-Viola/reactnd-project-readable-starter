@@ -1,16 +1,18 @@
-import { getInitialData } from '../utils/ReadableAPI'
-import { receivePosts  from '../utils/posts'
-import { receiveComments } from '../actions/comments'
-import { receiveCategories } from '../actions/categories'
+import { getCategories } from '../actions/categories'
+import { getTotalPosts }  from '../utils/posts'
 
 
 export function handleInitialData () {
   return (dispatch) => {
-    return getInitialData()
-      .then(({ users, tweets }) => {
-        dispatch(receiveUsers(users))
-        dispatch(receiveTweets(tweets))
-        dispatch(setAuthedUser(AUTHED_ID))
-      })
+    // return getInitialData()
+    //   .then(({ users, tweets }) => {
+    //     dispatch(receiveUsers(users))
+    //     dispatch(receiveTweets(tweets))
+    //     dispatch(setAuthedUser(AUTHED_ID))
+    //   })
+    return getCategories()
+      .then(
+        dispatch(getTotalPosts();)
+      )
   }
 }
