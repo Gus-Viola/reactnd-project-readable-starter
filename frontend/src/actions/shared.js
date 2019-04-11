@@ -1,5 +1,5 @@
 import { getCategories } from '../actions/categories'
-import { getTotalPosts }  from '../utils/posts'
+import { getTotalPosts }  from '../actions/posts'
 
 
 export function handleInitialData () {
@@ -10,9 +10,9 @@ export function handleInitialData () {
     //     dispatch(receiveTweets(tweets))
     //     dispatch(setAuthedUser(AUTHED_ID))
     //   })
-    return getCategories()
-      .then(
-        dispatch(getTotalPosts();)
-      )
+    return getTotalPosts()
+      // .then(
+      //   dispatch(getTotalPosts())
+      // )
   }
 }

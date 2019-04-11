@@ -5,7 +5,7 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
-import reducer from "./reducers"; //is this correct? video says only ./reducers
+import reducer from "./reducers"
 import middleware from "./middleware"
 
 const store = createStore(reducer, middleware)
