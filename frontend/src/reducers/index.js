@@ -9,3 +9,5 @@ export default combineReducers({
   posts,
   comments
 });
+
+//this file has to be named index.js so that the default export works
