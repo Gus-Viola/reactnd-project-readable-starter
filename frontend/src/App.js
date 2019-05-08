@@ -3,15 +3,16 @@ import React, { Component } from 'react';
 import './App.css';
 import { connect } from 'react-redux';
 import { handleInitialData } from './actions/shared';
+import Dashboard from './components/Dashboard';
 
 class App extends Component {
   componentDidMount() {
-  this.props.dispatch(handleInitialData())
+    this.props.dispatch(handleInitialData())
 }
   render() {
     return (
       <div>
-        Starter code
+        <Dashboard />
       </div>
       // <div className="App">
       //   <header className="App-header">
@@ -33,4 +34,4 @@ class App extends Component {
   }
 }
 
-export default connect()(App) 
+export default connect()(App)
