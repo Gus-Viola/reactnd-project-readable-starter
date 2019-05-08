@@ -20,6 +20,6 @@ import { getTotalPosts }  from '../actions/posts'
 export function handleInitialData () {
   return (dispatch) => {
         getTotalPosts()(dispatch);
-       getCategories()(dispatch);
+        getCategories()(dispatch);
   }
 }

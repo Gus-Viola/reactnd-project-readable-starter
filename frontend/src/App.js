@@ -7,13 +7,13 @@ import Dashboard from './components/Dashboard';
 
 class App extends Component {
 
-  state = { loaded: "false" }
+  state = { loaded: false}
 
   componentDidMount() {
-    Promise.all(this.props.dispatch(handleInitialData()))
-      .then(this.state.loaded = "true");
-
-}
+      Promise.all([this.props.dispatch(handleInitialData())]).
+      then(this.setState({
+                loaded: true}))
+  }
   render() {
     return (
       <div>
