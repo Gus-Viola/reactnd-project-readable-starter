@@ -7,8 +7,8 @@ class Dashboard extends Component {
     return (
       <div>
         <h3 className='center'>Your Timeline</h3>
-        <ul classname='dashboard-list'>
-          {this.props.posts.map((id) => (
+        <ul className='dashboard-list'>
+          {this.props.todosPosts.map((id) => (
             <li key={id}>
               <div>POST ID: {id}</div>
             </li>
@@ -20,8 +20,9 @@ class Dashboard extends Component {
 }
 
 function mapStateToProps ({ posts }) {
+  console.log(posts)
   return {
-    id: Object.keys(posts)
+    todosPosts: Object.keys(posts)
       .sort((a,b) => posts[b].timestamp - posts[a].timestamp)
   }
 }

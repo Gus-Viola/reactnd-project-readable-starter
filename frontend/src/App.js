@@ -6,13 +6,18 @@ import { handleInitialData } from './actions/shared';
 import Dashboard from './components/Dashboard';
 
 class App extends Component {
+
+  state = { loaded: "false" }
+
   componentDidMount() {
-    this.props.dispatch(handleInitialData())
+    Promise.all(this.props.dispatch(handleInitialData()))
+      .then(this.state.loaded = "true");
+
 }
   render() {
     return (
       <div>
-        <Dashboard />
+        {this.state.loaded ? <Dashboard /> : 'carregando'}
       </div>
       // <div className="App">
       //   <header className="App-header">
