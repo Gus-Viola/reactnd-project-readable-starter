@@ -3,11 +3,15 @@ import { GET_TOTAL_POSTS, GET_POSTS_BY_CATEGORY, GET_POST, ADD_POST,
 
 export default function posts(state = {}, action) {
   const { data } = action;
+  console.log("aqui");
+  console.log(data);
+
 
   switch (action.type) {
     case GET_TOTAL_POSTS:
-      //return _.mapKeys(data, 'id'); //is this right?
-      return { ...state, [data.id]: data };
+    // return { ...state, [data.id]: data };
+    // return { ...state, data: action.data, loaded: "true" };
+    return { ...state, data: action.data};
 
     case GET_POSTS_BY_CATEGORY:
       return { ...state, [data.id]: data };
