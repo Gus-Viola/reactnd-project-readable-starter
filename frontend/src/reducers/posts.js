@@ -1,7 +1,9 @@
 import { GET_TOTAL_POSTS, GET_POSTS_BY_CATEGORY, GET_POST, ADD_POST,
   EDIT_POST, DELETE_POST, UPVOTE_POST } from '../actions/posts';
 
-export default function posts(state = {}, action) {
+  // export default function posts(state = {}, action) {
+export default function posts(state = { data: [] }, action) {
+  // data: []
   const { data } = action;
   console.log("aqui");
   console.log(data);
